@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html >
+	<head>
+		<meta charset="UTF-8">
+		<title>HULU REPLAY</title>
+        
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="fonts/fonts.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:site" content="Hulu">
+        <meta name="twitter:title" content="Hulu Replay">
+        <meta name="twitter:image" content="https://www.hulureplay.com/img/share_index.jpeg">
+
+        <meta property="og:title" content="Hulu Replay" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.hulureplay.com" />
+        <meta property="og:image" content="https://www.hulureplay.com/img/share_index.jpeg" />
+        <meta property="og:site_name" content="Hulu Replay" /meta property="fb:admins" content="Facebook numeric ID" />
+        <meta property="og:description" content="See what the country streamed the most on Hulu in 2019. #HuluReplay">
+        
+        <link rel="shortcut icon" type="image/png" href="hulu_favicon_32.png"/>
+        <link rel='shortcut icon' type='image/x-icon' href='hulu_favicon_32.png' />
+    
+    
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-155155339-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'UA-155155339-1');
+        </script>
+
+	</head>
+	<body>
+
+        <div class="map-welcome-cont">
+            <div class="map-welcome"><img class="imgMap" src="img/USAMap.png"></div>
+        </div>
+        
+        <!-- 
+        <div class="map-showdown-cont">
+            <div class="map-showdown">
+                <img class="imgMap2A" src="img/showdown_maps/Showdown_0.png">
+                <img class="imgMap2B" src="">
+            </div>
+            
+        </div> -->
+        
+        <div class="mainBgr"></div>
+
+		<main id="fullpage">
+			<section id="page_1" class="section">
+				<div class="rewind-logo">
+					<img src="img/replay_logo.png">
+				</div>
+				<script> touchAvailable = false; touchAvailable2 = false; touchAvailable3 = false; </script>
+				<div class="line_pause">
+				    <div class="bttn_pause" ontouchstart="touchAvailable3=true; playsound('pause');" onclick="if(!touchAvailable3) playsound('pause');"></div>
+				</div>
+				<div class="bttn_back" ontouchstart="touchAvailable=true; playsound('skip');" onclick="if(!touchAvailable) playsound('skip');"></div>
+				<div class="line_back"><img src="img/home-dashIzq.png"></div>
+				
+				<div class="line_stop">
+				    <div class="bttn_stop" ontouchstart="touchAvailable2=true; playsound('stop');" onclick="if(!touchAvailable2) playsound('stop');"></div>
+				</div>
+				    <audio hidden id="audioPause"> <source src="img/sound_pause.mp3" type="audio/mpeg"> </audio>
+				    <audio hidden id="audioStop">  <source src="img/sound_stop.mp3" type="audio/mpeg"> </audio>
+				    <audio hidden id="audioSkip"> <source src="img/sound_skip.mp3" type="audio/mpeg"> </audio>
+			</section>
+			
+			<section id="page_2" class="section">
+			    <div class="linesBgr"></div>
+				<div class="Welcome-Txt-Content">
+				    <div class="welcome-title">
+				        <h2>WHAT’S <img class="forwardTitle" src="img/forward.png"> ON REPLAY</h2>
+				    </div>
+					<div class="welcome-text">
+					    <p>From coast to coast, and sea to shining stream, find out what we all watched in 2019. And what we might queue up next. </p>
+					</div>
+
+				</div>
+				
+			</section>
+			
+            <script> toAb = false; </script>
+            
+			<section id="page_3" class="section">
+			
+			<div id="arrow-map" > 
+			    <div class="l-btn" ontouchstart="mobileMap('L')"> <img src="img/arrow-l.png"> </div>
+			    <div class="text-btn" ontouchstart="mobileMap('L')">TAP HERE TO MOVE THE MAP</div>
+			    <div class="r-btn" ontouchstart="mobileMap('R')"> <img src="img/arrow-r.png"> </div>
+			</div> 
+			
+				<div class="usa-map-cont">
+
+				    <!-- <img class="imgMap" src="img/USAMap.png"> -->
+				    <div id="pin-a" class="pines" ontouchstart="toAb=true; showlbox('atlanta');" onclick="if(!toAb) showlbox('atlanta');"> <h4>ATLANTA</h4> </div>
+				    <div id="pin-b" class="pines" ontouchstart="toAb=true; showlbox('boston');" onclick="if(!toAb) showlbox('boston');"> <h4>BOSTON</h4> </div>
+				    <div id="pin-c" class="pines" ontouchstart="toAb=true; showlbox('anchorage');" onclick="if(!toAb) showlbox('anchorage');"> <h4>Anchorage</h4> </div>
+				    <div id="pin-d" class="pines" ontouchstart="toAb=true; showlbox('charlotte');" onclick="if(!toAb) showlbox('charlotte');"> <h4>Charlotte</h4> </div>
+				    <div id="pin-e" class="pines" ontouchstart="toAb=true; showlbox('chicago');" onclick="if(!toAb) showlbox('chicago');"> <h4>Chicago</h4> </div>
+				    
+				    <div id="pin-f" class="pines" ontouchstart="toAb=true; showlbox('dallas');" onclick="if(!toAb) showlbox('dallas');"> <h4>Dallas</h4> </div>
+				    <div id="pin-g" class="pines" ontouchstart="toAb=true; showlbox('detroit');" onclick="if(!toAb) showlbox('detroit');"> <h4>Detroit</h4> </div>
+				    <div id="pin-h" class="pines" ontouchstart="toAb=true; showlbox('houston');" onclick="if(!toAb) showlbox('houston');"> <h4>Houston</h4> </div>
+				    <div id="pin-i" class="pines" ontouchstart="toAb=true; showlbox('indianapolis');" onclick="if(!toAb) showlbox('indianapolis');"> <h4>Indianapolis</h4> </div>
+				    <div id="pin-j" class="pines" ontouchstart="toAb=true; showlbox('ithaca');" onclick="if(!toAb) showlbox('ithaca');"> <h4>Ithaca</h4> </div>
+				    
+				    <div id="pin-k" class="pines" ontouchstart="toAb=true; showlbox('las_vegas');" onclick="if(!toAb) showlbox('las_vegas');"> <h4>Las Vegas</h4> </div>
+				    <div id="pin-l" class="pines" ontouchstart="toAb=true; showlbox('los_angeles');" onclick="if(!toAb) showlbox('los_angeles');"> <h4>Los Angeles</h4> </div>
+				    <div id="pin-m" class="pines" ontouchstart="toAb=true; showlbox('milwaukee');" onclick="if(!toAb) showlbox('milwaukee');"> <h4>Milwaukee</h4> </div>
+				    <div id="pin-n" class="pines" ontouchstart="toAb=true; showlbox('minneapolis');" onclick="if(!toAb) showlbox('minneapolis');"> <h4>Minneapolis</h4> </div>
+				    <div id="pin-o" class="pines" ontouchstart="toAb=true; showlbox('orlando');" onclick="if(!toAb) showlbox('orlando');"> <h4>Orlando</h4> </div>
+				    
+				    <div id="pin-p" class="pines" ontouchstart="toAb=true; showlbox('philadelphia');" onclick="if(!toAb) showlbox('philadelphia');"> <h4>Philadelphia</h4> </div>
+				    <div id="pin-q" class="pines" ontouchstart="toAb=true; showlbox('phoenix');" onclick="if(!toAb) showlbox('phoenix');"> <h4>Phoenix</h4> </div>
+				    <div id="pin-r" class="pines" ontouchstart="toAb=true; showlbox('portland');" onclick="if(!toAb) showlbox('portland');"> <h4>Portland</h4> </div>
+				    <div id="pin-s" class="pines" ontouchstart="toAb=true; showlbox('san_francisco');" onclick="if(!toAb) showlbox('san_francisco');"> <h4>San Francisco</h4> </div>
+				    <div id="pin-t" class="pines" ontouchstart="toAb=true; showlbox('washington');" onclick="if(!toAb) showlbox('washington');"> <h4>Washington DC</h4> </div>
+				</div>
+
+			</section>
+
+            <section id="page_4" class="section">
+
+                <div id="randomQuestion"><a class="randomBtn" onclick="randomQ()"></a><h5>Next Showdown</h5><span>WHAT CITY IS BETTER FOR FALLING IN LOVE?</span> </div>
+                
+                <div class="cornerSect"> 
+                    <p></p>
+                </div>
+                
+                <div class="usa-map2-cont">
+                    <div class="map-showdown">
+                        <img class="imgMap2B" src="">
+                    </div>
+				    <img class="imgMap" src="img/showdown_maps/Showdown_0.png">
+                    <div id="pin2-Georgia" class="pines2"> <h4>Georgia</h4> </div>
+                    <div id="pin2-Massachusetts" class="pines2"> <h4>Massachusetts</h4> </div>
+                    <div id="pin2-Alaska" class="pines2"> <h4>Alaska</h4> </div>
+                    <div id="pin2-NorthCarolina" class="pines2"> <h4>North Carolina</h4> </div>
+                    <div id="pin2-Chicago" class="pines2"> <h4>Chicago</h4> </div>
+
+                    <div id="pin2-Texas" class="pines2"> <h4>Texas</h4> </div>
+                    <div id="pin2-Michigan" class="pines2"> <h4>Michigan</h4> </div>
+                    <div id="pin2-Indiana" class="pines2"> <h4>Indiana</h4> </div>
+                    <div id="pin2-Ithaca" class="pines2"> <h4>Ithaca</h4> </div>
+
+                    <div id="pin2-Nevada" class="pines2"> <h4>Nevada</h4> </div>
+                    <div id="pin2-California" class="pines2"> <h4>California</h4> </div>
+                    <div id="pin2-Wisconsin" class="pines2"> <h4>Wisconsin</h4> </div>
+                    <div id="pin2-Minnesota" class="pines2"> <h4>Minnesota</h4> </div>
+                    <div id="pin2-Florida" class="pines2"> <h4>Florida</h4> </div>
+
+                    <div id="pin2-Pennsylvania" class="pines2"> <h4>Pennsylvania</h4> </div>
+                    <div id="pin2-Arizona" class="pines2"> <h4>Arizona</h4> </div>
+                    <div id="pin2-Oregon" class="pines2"> <h4>Oregon</h4> </div>
+                    
+                    <div id="pin2-Illinois" class="pines2"> <h4>Illinois</h4> </div>
+                    <div id="pin2-NewYork" class="pines2"> <h4>New York</h4> </div>
+                    <div id="pin2-Washington" class="pines2"> <h4>Washington</h4> </div>
+				</div>
+               
+               
+                <div id="showdown">
+                    <div class="select-content">
+                        <section id="stateA" class="slct">
+                            <select id="states_a">
+                                <option value="0">SELECT STATE</option>
+                            </select>
+                        </section>
+                        <section id="textVs"><h5>VS</h5></section>
+                        <section id="stateB" class="slct">
+                            <select>
+                                <option value="0">SELECT STATE</option>
+                            </select>
+                        </section>
+                    </div>
+                </div>
+                
+            </section>
+            
+		</main>
+		
+		<div class="scrollDown" onclick="nextPage()"><img src="img/ScrollDown.png"></div>
+		<div class="linkMsg">LINK COPIED TO CLIPBOARD</div>
+		<div class="share-main">
+            <a class="share-text">Share</a>
+		    <ul>
+                <li><a class="FBSocial" >Facebook</a></li>
+
+		        <!-- <li><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A//www.hulureplay.com/">Facebook</a></li> -->
+		        <li><a class="TwSocial">Twitter</a></li>
+		        <li><a onclick="select_all_and_copy(document.getElementById('linkUrl'));">COPY LINK</a>  </li>  
+		        <textarea readonly id="linkUrl" type="text" style="opacity: 0; position: absolute; height: 47px; bottom: -100%; right: -400%;">https://www.hulureplay.com</textarea>
+		    </ul>
+		</div>
+
+		<div class="menubtn">
+			<?xml version="1.0" encoding="UTF-8"?>
+<svg width="135px" height="90px" viewBox="0 0 135 90" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>Combined Shape</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="mapasvg" transform="translate(1.000000, 2.000000)" fill="#ffffff" fill-rule="nonzero">
+            <path d="M99.5,63 L101.5,63 L101.5,87 L99.5,87 L99.5,63 Z M101.5,63 L101.5,87 L99.5,87 L99.5,63 L101.5,63 Z M35.5,87 L33.5,87 L33.5,51 L35.5,51 L35.5,87 Z M33.5,87 L33.5,51 L35.5,51 L35.5,87 L33.5,87 Z M99.5,8 L101.5,8 L101.5,31 L99.5,31 L99.5,8 Z M101.5,8 L101.5,31 L99.5,31 L99.5,8 L101.5,8 Z M66.5,64 L68.5,64 L68.5,81 L66.5,81 L66.5,64 Z M68.5,64 L68.5,81 L66.5,81 L66.5,64 L68.5,64 Z M35.5,21 L33.5,21 L33.5,8 L35.5,8 L35.5,21 Z M33.5,8.15218736 L33.2488349,8.20647788 L1,1.23912243 L1,79.009583 L33.2487324,85.9769163 L66.4813927,78.7935201 L99.7273587,85.9769418 L132,79.0094604 L132,1.23893414 L99.727188,8.20645241 L68.5,1.45922599 L68.5,19.4643797 C69.1963896,19.3811304 69.8635724,19.1790399 70.4662165,18.7378776 C70.6598988,18.5960877 70.9136981,18.4855825 71.1347978,18.5786794 C71.2921332,18.645033 71.3922444,18.7975454 71.4947451,18.9345417 C72.0420863,19.6667022 72.8773098,20.0798354 73.7551686,20.2633801 C75.6697309,20.6636464 77.7526961,20.0949731 79.5924266,20.8672486 C78.8399582,21.3821829 78.1816899,22.0348704 77.6573642,22.7819163 C77.4827986,23.0305532 77.6274315,23.3677456 77.9232372,23.4342254 C77.9277648,23.4352346 77.9321667,23.4363699 77.9366943,23.4373791 C78.4230382,23.5509119 78.9329006,23.5012098 79.3622716,23.2451302 L79.3749742,23.2375613 C80.4588405,22.592695 81.6314989,22.0983227 82.8493079,21.7728619 C82.7818964,22.4116732 83.1766813,23.051746 83.7436423,23.3504634 C84.3106032,23.649307 85.0130161,23.6298803 85.6023637,23.3788466 C86.1383858,23.1505195 86.641331,22.6392434 87.2311816,22.5667086 C87.6668411,22.513222 88.1524303,22.6955053 88.604188,22.834646 C89.2427108,23.0315624 90.0158051,23.6804655 90.3235588,24.2753774 C90.7173376,25.0365518 91.1146378,25.806935 91.3162435,26.6402658 C91.4133362,27.0414151 91.4652783,27.4577021 91.6314175,27.8352617 C92.1715899,29.0625514 93.9296971,29.3336426 93.9844061,30.8075507 C94.0110688,31.523312 92.3813705,33.3159951 92.966442,33.7880393 C94.4126452,34.954652 96.6070407,32.8252811 97.5472803,31.8948166 C98.5446184,30.9079642 98.9289646,28.6475259 100.042261,28.0463066 C100.753729,27.6620611 101.685039,28.0577861 102.41751,27.7152954 C103.034778,27.4267959 103.318636,26.7034658 103.427425,26.0290809 C103.536214,25.3548221 103.533573,24.6452421 103.826612,24.0285066 C104.311572,23.0075943 105.469767,22.5081761 106.56206,22.2271193 C107.654101,21.9460626 108.824244,21.7752587 109.721723,21.0892683 C110.884068,20.2001802 111.217982,18.7345978 111.466625,17.3698072 C111.607988,16.5938736 111.460714,15.6861157 111.770354,14.9482785 C111.92379,14.5827029 112.018493,14.4370024 112.397557,14.3423918 C112.584322,14.2957172 112.74933,14.5118079 112.936724,14.4721976 C113.268122,14.4018073 113.442687,14.0112544 113.875203,14.0009103 C115.255755,13.9679858 115.283047,15.7049116 115.829885,16.55666 C116.531291,17.6484672 118.954207,18.120133 117.59101,20.037576 C117.359598,20.3631629 117.042663,20.6144488 116.688124,20.7973628 C116.333207,20.9804029 115.83328,21.426713 115.353225,21.284797 C114.769537,22.4752516 114.185975,23.6658323 113.602412,24.8562869 C113.518148,25.0280999 113.431745,25.2117708 113.451743,25.4021275 C113.477525,25.6463492 113.669069,25.8348136 113.782009,26.0526705 C113.797981,26.0834505 113.811313,26.1167534 113.821877,26.1513179 C113.905638,26.4244273 114.069639,26.6604494 114.281307,26.8516892 C114.82827,27.3460615 115.080183,28.6255763 114.700742,29.0446385 C114.008265,29.808462 112.341591,29.667429 111.874364,30.431631 C107.6375,30.3463552 109.80888,38.6548125 108.248983,40.9206751 C108.152393,41.060825 108.039957,41.2029933 108.025745,41.372788 C108.014552,41.5068828 108.067248,41.6370671 108.118939,41.7611963 C109.222928,44.4140797 109.118164,45.3483286 108.105608,47.9787576 C107.334777,49.2705087 105.736395,49.7619797 105.040019,51.086403 C104.825837,51.4937335 104.723587,51.95064 104.536822,52.3714682 C104.110847,53.3315774 103.232862,53.6533798 102.641628,54.4270429 C101.949151,55.3327824 101.736604,56.5291659 101.533489,57.622613 C101.208379,59.3729105 103.06534,61.7376728 103.899306,63.2259618 C104.810493,64.852004 105.977366,66.3474834 106.59476,68.1290655 C107.144868,69.7165065 106.53175,73.774926 104.212216,71.3092457 C102.35601,69.3362977 100.101875,67.6929734 99.7389089,64.9285756 C99.544975,63.4518921 98.1053117,62.7950417 97.0291172,62.0226402 C96.9029722,61.9320662 96.7627411,61.8597837 96.6099333,61.833545 C95.6449175,61.6680394 95.3594247,63.1215117 94.2276409,62.9368316 C91.8744007,62.5529646 90.9078757,61.9219744 88.421699,62.4898908 C88.2216026,62.5355562 88.0213803,62.5813478 87.8209066,62.6271393 C87.0840334,62.7954202 86.1786314,62.6229765 85.8868503,63.5688309 C85.7496377,64.013375 85.895151,64.4984124 86.244911,64.8043202 L86.2485583,64.8074739 C86.6292573,65.1410081 87.0029132,65.9089945 86.1412784,65.8020213 C85.8876049,65.7704844 85.6517904,65.6537979 85.4002549,65.608511 C84.4053064,65.4293814 83.5100916,66.3925181 82.5258333,65.8772053 C81.1021425,65.1319254 80.4936782,65.0829802 78.7448778,65.1181754 C77.8907891,65.1354576 77.0174579,65.1561458 76.2177009,65.4575123 C75.0430302,65.9002903 74.1681898,66.8913056 73.0976549,67.5479037 C72.5049115,67.9115871 71.8506678,68.1732171 71.2860964,68.5796646 C68.8610429,70.3261777 70.1963189,72.523416 70.1680212,74.9267795 C70.1135638,74.9352314 70.0596094,74.9429264 70.0064097,74.9497383 C64.2093973,75.7029655 64.6370077,67.7697972 60.6177223,65.9176986 C58.3425839,64.8694124 57.2120577,69.3026163 54.7912803,66.3904997 C54.3398999,65.8475606 54.0043516,65.2182104 53.7621229,64.5542957 C51.911828,59.4837942 46.5045699,61.6222478 42.6720496,61.3919024 C38.8889561,61.1645844 36.6445051,58.2891768 33.1425024,57.4651809 C32.2080481,57.2453057 31.2182561,57.1826103 30.364922,56.7414723 C28.672214,55.8661343 27.4696229,53.6147787 26.0625334,52.3010779 C24.5977166,50.9336383 22.9686471,49.5899144 22.3471029,47.6015764 C21.8095716,45.8815543 22.1341782,43.9631021 21.4349095,42.2888716 C20.5843423,40.2522191 19.8528772,39.0372919 20.0254305,36.6614286 C20.2404933,33.7001145 20.9147342,30.798342 21.7492031,27.9567419 C22.4576528,25.5445481 24.0503754,22.6733033 24.1146427,20.1431615 C24.146965,18.8703326 23.0950437,18.3213383 23.607673,16.9040704 C23.6313173,16.8385998 23.6820017,16.7865009 23.7465205,16.7608929 C23.8112909,16.7354111 23.8836074,16.7389433 23.9454851,16.7706063 C24.1013113,16.8505839 24.2558799,16.9305614 24.4101969,17.0104128 C24.7422237,17.1820997 25.0855696,17.3598416 25.4240106,17.5272394 C25.7250986,17.6760935 25.8267189,17.6996831 25.8620597,17.6923666 C25.9123668,17.6519993 25.9954992,17.3540388 26.0227908,17.2561483 C26.0966165,16.9913645 26.2114424,16.7426015 26.3329341,16.4790793 C26.3896553,16.3562115 26.4491435,16.2274149 26.5080028,16.0891571 C26.5532791,15.9826886 26.6679793,15.9232731 26.7809187,15.9473673 L27.5603014,16.1137559 C28.1422287,16.237759 28.7567299,16.3687001 29.3708538,16.5010289 C30.7377057,16.7955378 32.1162455,17.0567646 33.5,17.2932315 L33.5,8.15218736 Z M35.5,7.71987793 L35.5,17.6182692 C38.617965,18.1006294 41.7465417,18.4786258 44.8122392,18.8490136 L45.7886999,18.9670877 C52.0126937,19.721324 58.1566992,19.6303717 64.9673995,19.4460701 C65.4675745,19.4325451 65.9828045,19.4602155 66.5,19.4845401 L66.5,1.02708805 L66.4814765,1.02308569 L35.5,7.71987793 Z M105.262124,39.1877842 C105.258484,39.2680966 105.253864,39.3528875 105.248264,39.4424553 C105.244064,39.5096311 105.242524,39.5775534 105.242944,39.6460727 C105.310004,39.5069441 105.324984,39.3767722 105.264784,39.1964424 C105.263804,39.1934568 105.262964,39.1906205 105.262124,39.1877842 Z M66.4814765,80.8396915 L33.2488349,88.0230837 L-1,80.6236285 L-1,-1.23912243 L33.2487324,6.16031054 L66.4813927,-1.02308569 L99.7273587,6.16033601 L134,-1.23912243 L134,80.6237512 L99.727188,88.0230582 L66.4814765,80.8396915 Z" id="Combined-Shape"></path>
+        </g>
+    </g>
+</svg>
+		</div>
+		
+
+        <div class="hulu-logo">
+		    <div><img onclick="goTo(1)" src="img/logo.png"></div>
+		</div>
+		
+		<div class="sidemenu">
+            <ul>
+                <li><a onclick="goTo(3)">WELCOME SIGNS</a></li>
+                <li><a onclick="goTo(4)">SHOWDOWN</a></li>
+                <li><a>COMING SOON: YOU ARE HERE</a></li>
+                <li><a>COMING SOON: FIND YOUR STREAMTEAM</a></li>
+                <li><a>COMING SOON: STATES OF MIND</a></li>
+            </ul>
+		</div>
+		
+        <script> var touchAvailable6 = false; </script>
+		<div class="overlayInfo"  ontouchstart="touchAvailable6=true; showInfo();" onclick="if(!touchAvailable6) showInfo();"></div>
+        <script> var touchAvailable5 = false; </script>
+		<div class="infoBtn" ontouchstart="touchAvailable3=true; showInfo();" onclick="if(!touchAvailable3) showInfo();">
+            <div class="info-bubble-ds">
+                <p>We created new welcome signs based on data – not what a guy 150 years ago was imagining.</p>
+                <div class="info-bubble-ds-arrow"></div>
+            </div>
+        </div>
+		
+		<div id="lbox-welcome">
+            <div class="shareCont">
+                <div class="shareImg"> <img src=""> </div>
+                <div class="shareTxt"> 
+                    <p class="copytop"></p>
+
+                    <ul class="socialBtns">
+                        <li><a class="fbLink" href onclick><img src="img/share-fb.png"></a></li> 
+                        <li><a class="twLink" href="#"><img src="img/share-tw.png"></a></li>
+                        <li><a class="downloadLink" href="#" download target="_blank" ><img src="img/share-file.png"></a></li>
+                    </ul>
+                    <!-- <p class="feedCopy"><span class="city"></span> would like <span class="recomend"></span>. Maybe you would too.</p> -->
+                </div>
+                <a class="closeBox" onclick="hidlbox('welcome');"><img src="img/XIcon.png"></a>
+            </div>
+		</div>
+
+		<div id="lbox-showdown">
+            <div class="shareCont">
+                <div class="shareImgShow"> <img src=""> </div>
+          
+                <div class="shareTxt"> 
+                    <p class="copytop"></p>
+
+                    <ul class="socialBtns">
+                        <li><a class="fbLink" href onclick><img src="img/share-fb.png"></a></li> 
+                        <li><a class="twLink" href="#"><img src="img/share-tw.png"></a></li>
+                        <li><a class="downloadLink" href="#" download target="_blank" ><img src="img/share-file.png"></a></li>
+                    </ul>
+                    
+                </div>
+             
+                <a class="closeBox" onclick="hidlbox('showdown');"><img src="img/XIcon.png"></a>
+            </div>
+		</div>
+        
+		<div class="greenBorder-L"></div> <div class="greenBorder-R"></div><div class="greenBorder-T"></div> <div class="greenBorder-B"></div>
+		
+		<div id="allLoader"> </div>
+		<!-- <script type="text/javascript" src="https://unpkg.com/pageable@latest/dist/pageable.min.js"></script>
+		
+		<script type="text/javascript" src="https://unpkg.com/minibarjs@latest/dist/minibar.min.js"></script>
+		<script type="text/javascript" src="https://unpkg.com/rangeable@latest/dist/rangeable.min.js"></script> -->
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js"></script>
+
+		<script type="text/javascript" src="js/jquery.fullPage.js"></script>
+		
+		<script type="text/javascript" src="js/effects.js"></script>
+		<script type="text/javascript" src="js/clipboard.js"></script>
+		
+		<!-- <script type="text/javascript" src="js/custom-select.js"></script> -->
+		<!-- <script src="//code.jquery.com/mobile/1.5.0-alpha.1/jquery.mobile-1.5.0-alpha.1.min.js"></script> -->
+		
+	</body>
+</html>

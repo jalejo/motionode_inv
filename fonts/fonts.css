@@ -1,0 +1,35 @@
+@font-face {
+     font-family: 'UlagadiSans';
+     src: url('UlagadiSansLight.woff2') format('woff2'),
+          url('UlagadiSansLight.woff') format('woff'),
+          url('UlagadiSansLight.ttf') format('truetype');
+     font-weight: 300;
+     font-style: normal;
+}
+
+@font-face {
+     font-family: 'UlagadiSans';
+     src: url('UlagadiSansRegular.woff2') format('woff2'),
+          url('UlagadiSansRegular.woff') format('woff'),
+          url('UlagadiSansRegular.ttf') format('truetype');
+     font-weight: 400;
+     font-style: normal;
+}
+
+@font-face {
+     font-family: 'UlagadiSans';
+     src: url('UlagadiSansMedium.woff2') format('woff2'),
+          url('UlagadiSansMedium.woff') format('woff'),
+          url('UlagadiSansMedium.ttf') format('truetype');
+     font-weight: 600;
+     font-style: normal;
+}
+
+@font-face {
+     font-family: 'UlagadiSans';
+     src: url('UlagadiSansBold.woff2') format('woff2'),
+          url('UlagadiSansBold.woff') format('woff'),
+          url('UlagadiSansBold.ttf') format('truetype');
+     font-weight: 700;
+     font-style: normal;
+}
