@@ -1,6 +1,6 @@
 let scene_bbl_delay = 800;
-let scene_01_ft = false;
-let scene_02_ft = false;
+let scene_01_ft = true;
+let scene_02_ft = true;
 
 $(document).ready(function(){
 
@@ -57,6 +57,7 @@ $(document).ready(function(){
                         $(".scene_02 .bubble_stakeholder").addClass("scene2_bblStack_appers");
                         setTimeout(function () {
                             $(".scene_02 .bubble_development").addClass("scene2_bblDv_appers");
+                            fullpage_api.setAllowScrolling(true);
                         }, scene_bbl_delay);
                     }, scene_bbl_delay);
                 }, scene_bbl_delay);
