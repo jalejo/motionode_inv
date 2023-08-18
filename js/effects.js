@@ -9,19 +9,21 @@ $(document).ready(function(){
 
     $('#fullpage').fullpage({
         licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
-        /*
-        beforeLeave: function (origin, destination, direction, trigger) {
-            if (origin.item.id == "page_4") {
-                $(".can-cocktails").addClass("can-cocktails-dropdown");
-            }
-        },
-        */
+
         onLeave: function (origin, destination, direction) {
+       
             if (destination.item.dataset.bgr == "diagonal") { 
                 $("#diagonal_colors").fadeIn(250);  
+
             }else{
                 $("#diagonal_colors").fadeOut(250);
             } 
+            if (destination.item.dataset.headline == "true") {
+                $("#diagonal_colors h3").fadeIn(250);
+            }
+            else {
+                $("#diagonal_colors h3").fadeOut(250);
+            }
         },
         afterLoad: function (origin, destination, direction) {
             if (destination.item.dataset.scene == "scene_01") {
@@ -129,16 +131,79 @@ $(document).ready(function(){
                 setTimeout(function () {
                     $(".scene_04 .bubble_stakeholder:nth-of-type(1)").addClass("scene1_bbl_appers_1");
                     $(".great_icon").html("<img src='/img/confetti-ball.webp'>");
-                    
+                
                     setTimeout(function () {
-                        $(".great_icon").addClass("great_icon_appers");
-                        setTimeout(function () {
-                            $(".great_icon").fadeOut(10);
-                        }, 1000);
-                    }, 1000);
+                        $(".hand_icon").addClass("hand_appers");
+                    }, 800);
 
+                    /************ ALL HAND MOVE **************/
+
+                    setTimeout(function () {
+                        $(".app_request_wrapper section:nth-child(6)").addClass("grab-hover");
+                        setTimeout(function () {
+                            $(".app_request_wrapper section:nth-child(5)").addClass("grab-hover");
+                            setTimeout(function () {
+                                $(".app_request_wrapper section:nth-child(4)").addClass("grab-hover");
+                                $(".app_request_wrapper section:nth-child(5)").removeClass("grab-hover");
+                                setTimeout(function () {
+                                    $(".app_request_wrapper section:nth-child(5)").addClass("grab-hold");
+                                    setTimeout(function () {
+                                        $(".app_request_wrapper").addClass("row-to-top");
+                                        setTimeout(function () {
+                                            $(".app_request_wrapper section:nth-child(5)").removeClass("grab-hold");
+                                        }, 500);
+                                    }, 500);
+                                }, 500);
+                            }, 300);
+                        }, 400);
+                    }, 800 + 400 );
+                    setTimeout(function () {
+                        $(".scene_04 .days_wrapper").addClass("clockappers");
+                        $(".scene_04 .days_copy p").html("<span>0</span> minutes spent");
+                        $(".scene_04 .clock_hours").addClass("animate_clock");
+                        $(".scene_04 .clock_minutes").addClass("animate_clock");
+                        setTimeout(function () {
+                            $(".scene_04 .bubble_stakeholder:nth-of-type(2)").addClass("scene4_bbl_appers_2");
+                            setTimeout(function () {
+                                $(".great_icon").fadeIn(10);
+                                setTimeout(function () {
+                                    $(".great_icon").fadeOut(10);
+                                }, 1000);
+                            }, 500);
+                        }, 650);
+                    }, 4000 );
                 }, scene_bbl_delay);
                 
+            }
+            if (destination.item.id == "page_10"){
+                $(".sneak_peak_wrapper img:nth-child(1)").addClass("sneak_peak_appers");
+                setTimeout(function () {
+                    $(".sneak_peak_wrapper img:nth-child(2)").addClass("sneak_peak_appers");
+                    setTimeout(function () {
+                        $(".sneak_peak_wrapper img:nth-child(3)").addClass("sneak_peak_appers");
+                        setTimeout(function () {
+                            $(".sneak_peak_wrapper img:nth-child(4)").addClass("sneak_peak_appers");
+                        }, 400);
+                    }, 400);
+                }, 400);
+            }
+
+            if (destination.item.id == "page_13"){
+
+                $(".serie_circle:nth-of-type(1)").addClass("circle_grow_up");
+                setTimeout(function () {
+                    $(".circle_arrow:nth-of-type(1)").addClass("arrow_appers");
+                    setTimeout(function () {
+                        $(".serie_circle:nth-of-type(2)").addClass("circle_grow_up");
+                        setTimeout(function () {
+                            $(".circle_arrow:nth-of-type(2)").addClass("arrow_appers");
+                            setTimeout(function () {
+                                $(".serie_circle:nth-of-type(3)").addClass("circle_grow_up");
+                            }, 350);
+                        }, 350);
+                    }, 350);
+                }, 350);
+
             }
         }
     });
