@@ -931,13 +931,47 @@ img.urgent_client_circle {
   align-items: center;
 }
 
-.page_11_box{
-  width: 83%;
-}
-.page_11_logo{
-  text-align: center;
+.page_11_Rbox {
+  position: absolute;
+  left: 60%;
+  width: 30%;
 }
 
+.page_11_logo {
+  text-align: center;
+  width: 14rem;
+}
+.page_11_logo img {
+  width: 100%;
+}
+
+.page_11_Lbox {
+  position: absolute;
+  right: 55%;
+  width: 35%;
+}
+.page_11_wrapper h5 {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+}
+.page_11_Rbox p {
+  font-size: 1.25rem;
+  font-weight: 100;
+  line-height: 1.55;
+  margin-top: 1rem;
+}
+
+.page_11_Lbox h3 {
+  font-size: 1.95rem;
+  margin-bottom: 2rem;
+}
+.page_11_Lbox ul {
+  columns: 2;
+}
+.page_11_Lbox li {
+  font-size: .9rem;
+  line-height: 1.5;
+}
 .team_advante{
   display: flex;
   align-items: center;
