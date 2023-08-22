@@ -1025,6 +1025,17 @@ img.urgent_client_circle {
   font-weight: 100;
   margin-bottom: 2rem;
 }
+.page_14_box p a {
+  font-weight: 400;
+  color: #4D9898;
+}
+.calendar {
+  width: 15rem;
+  display: block;
+}
+.calendar img{
+  width: 100%
+}
 
 .thnxs_wrapper {
   text-align: center;
