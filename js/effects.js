@@ -2,8 +2,8 @@ let scene_bbl_delay = 900;
 let clock_delay = 800;
 let scene_01_ft = true;
 let scene_02_ft = true;
-let scene_03_ft = false;
-let scene_04_ft = false;
+let scene_03_ft = true;
+let scene_04_ft = true;
 
 $(document).ready(function(){
 
@@ -95,6 +95,7 @@ $(document).ready(function(){
                         setTimeout(function () {
                             $(".scene_02 .bubble_development").addClass("scene2_bblDv_appers");
                             fullpage_api.setAllowScrolling(true);
+                            scene_02_ft = false;
                         }, scene_bbl_delay);
                     }, scene_bbl_delay);
                
@@ -114,6 +115,8 @@ $(document).ready(function(){
                             $(".scene_03 .days_copy p").html("Time saved: <span>90%</span>");
                             $(".scene_03 .clock_hours").addClass("animate_clock");
                             $(".scene_03 .clock_minutes").addClass("animate_clock");
+                            scene_03_ft = false;
+                            fullpage_api.setAllowScrolling(true);
                         }, scene_bbl_delay);
                     }, scene_bbl_delay);
                 }, scene_bbl_delay);
@@ -158,19 +161,52 @@ $(document).ready(function(){
                         }, 400);
                     }, 800 + 400 );
                     setTimeout(function () {
-                        $(".scene_04 .days_wrapper").addClass("clockappers");
-                        $(".scene_04 .days_copy p").html("<span>0</span> minutes spent");
-                        $(".scene_04 .clock_hours").addClass("animate_clock");
-                        $(".scene_04 .clock_minutes").addClass("animate_clock");
+
+                        $(".app_request_wrapper section:nth-child(5) div:nth-child(2)").html('June 07, 5:20 PM');
+                        $(".app_request_wrapper section:nth-child(5) div:nth-child(3)").html('<img src="/img/develper_01.png">Lauren W.');
+
+                        setTimeout(function () {
+                            $(".app_request_wrapper section:nth-child(2) div:nth-child(2)").html('June 12, 9:42 AM');
+                            $(".app_request_wrapper section:nth-child(2) div:nth-child(3)").html('<img src="/img/develper_03.png">Steve M.');
+                        }, 50);
+                        
+                        setTimeout(function () {
+                            $(".app_request_wrapper section:nth-child(3) div:nth-child(2)").html('June 14, 3:23 PM');
+                            $(".app_request_wrapper section:nth-child(3) div:nth-child(3)").html('<img src="/img/develper_02.png">John C.');
+                        }, 100);
+
+                        setTimeout(function () {
+                            $(".app_request_wrapper section:nth-child(4) div:nth-child(2)").html('June 25, 6:25 PM');
+                            $(".app_request_wrapper section:nth-child(4) div:nth-child(3)").html('<img src="/img/develper_02.png">John C.');
+                        }, 150);
+
+                        setTimeout(function () {
+                            $(".app_request_wrapper section:nth-child(6) div:nth-child(2)").html('June 30, 9:04 AM');
+                            $(".app_request_wrapper section:nth-child(6) div:nth-child(3)").html('<img src="/img/develper_03.png">Steve M.');
+                        }, 200);
+
+                        setTimeout(function () {
+                            $(".team_task img").attr("src","/img/team_task_reorder.png");
+                        }, 250);
+
+                        setTimeout(function () {
+                            $(".scene_04 .days_wrapper").addClass("clockappers");
+                            $(".scene_04 .days_copy p").html("<span>0</span> minutes spent");
+                            $(".scene_04 .clock_hours").addClass("animate_clock");
+                            $(".scene_04 .clock_minutes").addClass("animate_clock");
+                        }, 400);
+
                         setTimeout(function () {
                             $(".scene_04 .bubble_stakeholder:nth-of-type(2)").addClass("scene4_bbl_appers_2");
                             setTimeout(function () {
                                 $(".great_icon").fadeIn(10);
                                 setTimeout(function () {
                                     $(".great_icon").fadeOut(10);
-                                }, 1000);
+                                    scene_04_ft = false;
+                                    fullpage_api.setAllowScrolling(true);
+                                }, 700);
                             }, 500);
-                        }, 650);
+                        }, 1000);
                     }, 4000 );
                 }, scene_bbl_delay);
                 
@@ -189,21 +225,25 @@ $(document).ready(function(){
             }
 
             if (destination.item.id == "page_13"){
-
                 $(".serie_circle:nth-of-type(1)").addClass("circle_grow_up");
                 setTimeout(function () {
-                    $(".circle_arrow:nth-of-type(1)").addClass("arrow_appers");
+                    $(".product_dev_add").addClass("addAppers");
                     setTimeout(function () {
-                        $(".serie_circle:nth-of-type(2)").addClass("circle_grow_up");
+                    $(".product_invest").addClass("investAppers");
                         setTimeout(function () {
-                            $(".circle_arrow:nth-of-type(2)").addClass("arrow_appers");
+                            $(".circle_arrow:nth-of-type(1)").addClass("arrow_appers");
                             setTimeout(function () {
-                                $(".serie_circle:nth-of-type(3)").addClass("circle_grow_up");
+                                $(".serie_circle:nth-of-type(2)").addClass("circle_grow_up");
+                                setTimeout(function () {
+                                    $(".circle_arrow:nth-of-type(2)").addClass("arrow_appers");
+                                    setTimeout(function () {
+                                        $(".serie_circle:nth-of-type(3)").addClass("circle_grow_up");
+                                    }, 350);
+                                }, 350);
                             }, 350);
-                        }, 350);
-                    }, 350);
-                }, 350);
-
+                        }, 450);
+                    }, 450);
+                }, 250);
             }
         }
     });
