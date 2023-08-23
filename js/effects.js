@@ -1,9 +1,9 @@
 let scene_bbl_delay = 900;
 let clock_delay = 800;
-let scene_01_ft = true;
-let scene_02_ft = true;
-let scene_03_ft = true;
-let scene_04_ft = true;
+let scene_01_ft = false;
+let scene_02_ft = false;
+let scene_03_ft = false;
+let scene_04_ft = false;
 
 $(document).ready(function(){
 
@@ -30,13 +30,13 @@ $(document).ready(function(){
                 if( scene_01_ft ){
                     fullpage_api.setAllowScrolling(false);
                 }
-                $(".scene_01 .bubble_stakeholder:nth-of-type(1)").addClass("scene1_bbl_appers_1")
+                $(".scene_01 .bubble_stakeholder:nth-of-type(1)").addClass("scene1_bbl_appears_1")
                 setTimeout(function () {
                     
-                    $(".scene_01 .bubble_development:nth-of-type(1)").addClass("scene1_bbl_appers_2");
+                    $(".scene_01 .bubble_development:nth-of-type(1)").addClass("scene1_bbl_appears_2");
                     setTimeout(function () {
 
-                        $(".scene_01 .days_wrapper").addClass("clockappers");
+                        $(".scene_01 .days_wrapper").addClass("clockappears");
 
                         $(".scene_01 .days_copy p").html("<span>2</span> Days");
 
@@ -44,11 +44,11 @@ $(document).ready(function(){
                         $(".scene_01 .clock_minutes").addClass("animate_clock");
 
                         setTimeout(function () {
-                            $(".scene_01 .bubble_stakeholder.scene1_bbl_appers_1").addClass("bbl01_readed");
-                            $(".scene_01 .bubble_stakeholder:nth-of-type(2)").addClass("scene1_bbl_appers_3");
+                            $(".scene_01 .bubble_stakeholder.scene1_bbl_appears_1").addClass("bbl01_readed");
+                            $(".scene_01 .bubble_stakeholder:nth-of-type(2)").addClass("scene1_bbl_appears_3");
                             setTimeout(function () {
 
-                                $(".scene_01 .bubble_development:nth-of-type(2)").addClass("scene1_bbl_appers_4");
+                                $(".scene_01 .bubble_development:nth-of-type(2)").addClass("scene1_bbl_appears_4");
 
                                 $(".scene_01 .clock_hours").removeClass("animate_clock");
                                 $(".scene_01 .clock_minutes").removeClass("animate_clock");
@@ -61,7 +61,7 @@ $(document).ready(function(){
                                     $(".scene_01 .clock_minutes").addClass("animate_clock");
 
                                     setTimeout(function () {
-                                        $(".scene_01 .bubble_stakeholder:nth-of-type(3)").addClass("scene1_bbl_appers_5");
+                                        $(".scene_01 .bubble_stakeholder:nth-of-type(3)").addClass("scene1_bbl_appears_5");
 
                                         $(".scene_01 .days_wrapper").removeClass("clockpulse");
                                         $(".scene_01 .clock_hours").removeClass("animate_clock");
@@ -86,16 +86,18 @@ $(document).ready(function(){
                 if( scene_02_ft ){
                     fullpage_api.setAllowScrolling(false);
                 }
-                $(".scene_02 .urgent_wrapper").addClass("urgent_wrapper_appers");
+                $(".scene_02 .urgent_wrapper").addClass("urgent_wrapper_appears");
                 setTimeout(function () {
-                    $(".scene_02 .exclamation_wrapper").addClass("exclamation_appers");  
+                    $(".scene_02 .bubble_stakeholder").addClass("scene2_bblStack_appears");
                     setTimeout(function () {
-                        $(".scene_02 .bubble_stakeholder").addClass("scene2_bblStack_appers");
-                        $(".client_expression").fadeIn(1000);
+                        $(".scene_02 .bubble_development").addClass("scene2_bblDv_appears");
                         setTimeout(function () {
-                            $(".scene_02 .bubble_development").addClass("scene2_bblDv_appers");
-                            fullpage_api.setAllowScrolling(true);
-                            scene_02_ft = false;
+                            $(".scene_02 .exclamation_wrapper").addClass("exclamation_appears");
+                            $(".client_expression").fadeIn(1000);
+                            setTimeout(function () {
+                                fullpage_api.setAllowScrolling(true);
+                                scene_02_ft = false;
+                            }, scene_bbl_delay);
                         }, scene_bbl_delay);
                     }, scene_bbl_delay);
                
@@ -105,13 +107,14 @@ $(document).ready(function(){
                 if( scene_03_ft ){
                     fullpage_api.setAllowScrolling(false);
                 }
-                $(".scene_03 .bubble_stakeholder:nth-of-type(1)").addClass("scene1_bbl_appers_1");
+                $(".scene_03 .bubble_stakeholder:nth-of-type(1)").addClass("scene1_bbl_appears_1");
                 setTimeout(function () {
-                    $(".scene_03 .bubble_development:nth-of-type(1)").addClass("scene1_bbl_appers_2");
+                    $(".scene_03 .bubble_development:nth-of-type(1)").addClass("scene1_bbl_appears_2");
                     setTimeout(function () {
                         $(".scene_03 .singleLabel_stakeholder").fadeIn();
+                        $(".scene_03 .happy-face").fadeIn();
                         setTimeout(function () {
-                            $(".scene_03 .days_wrapper").addClass("clockappers");
+                            $(".scene_03 .days_wrapper").addClass("clockappears");
                             $(".scene_03 .days_copy p").html("Time saved: <span>90%</span>");
                             $(".scene_03 .clock_hours").addClass("animate_clock");
                             $(".scene_03 .clock_minutes").addClass("animate_clock");
@@ -125,18 +128,18 @@ $(document).ready(function(){
                 if( scene_04_ft ){
                     fullpage_api.setAllowScrolling(false);
                 }
-                $(".app_screen").addClass("app_screen_appers");
+                $(".app_screen").addClass("app_screen_appears");
                 
                 setTimeout(function () {
-                    $(".team_task").addClass("team_task_appers");
+                    $(".team_task").addClass("team_task_appears");
                 }, 300);
 
                 setTimeout(function () {
-                    $(".scene_04 .bubble_stakeholder:nth-of-type(1)").addClass("scene1_bbl_appers_1");
+                    $(".scene_04 .bubble_stakeholder:nth-of-type(1)").addClass("scene1_bbl_appears_1");
                     $(".great_icon").html("<img src='/img/confetti-ball.webp'>");
                 
                     setTimeout(function () {
-                        $(".hand_icon").addClass("hand_appers");
+                        $(".hand_icon").addClass("hand_appears");
                     }, 800);
 
                     /************ ALL HAND MOVE **************/
@@ -168,57 +171,58 @@ $(document).ready(function(){
                         setTimeout(function () {
                             $(".app_request_wrapper section:nth-child(2) div:nth-child(2)").html('June 12, 9:42 AM');
                             $(".app_request_wrapper section:nth-child(2) div:nth-child(3)").html('<img src="/img/develper_03.png">Steve M.');
-                        }, 50);
+                        }, 150);
                         
                         setTimeout(function () {
                             $(".app_request_wrapper section:nth-child(3) div:nth-child(2)").html('June 14, 3:23 PM');
                             $(".app_request_wrapper section:nth-child(3) div:nth-child(3)").html('<img src="/img/develper_02.png">John C.');
-                        }, 100);
+                        }, 300);
 
                         setTimeout(function () {
                             $(".app_request_wrapper section:nth-child(4) div:nth-child(2)").html('June 25, 6:25 PM');
                             $(".app_request_wrapper section:nth-child(4) div:nth-child(3)").html('<img src="/img/develper_02.png">John C.');
-                        }, 150);
+                        }, 450);
 
                         setTimeout(function () {
                             $(".app_request_wrapper section:nth-child(6) div:nth-child(2)").html('June 30, 9:04 AM');
                             $(".app_request_wrapper section:nth-child(6) div:nth-child(3)").html('<img src="/img/develper_03.png">Steve M.');
-                        }, 200);
+                        }, 600);
 
                         setTimeout(function () {
                             $(".team_task img").attr("src","/img/team_task_reorder.png");
-                        }, 250);
+                        }, 1200);
 
                         setTimeout(function () {
-                            $(".scene_04 .days_wrapper").addClass("clockappers");
+                            $(".scene_04 .days_wrapper").addClass("clockappears");
                             $(".scene_04 .days_copy p").html("<span>0</span> minutes spent");
                             $(".scene_04 .clock_hours").addClass("animate_clock");
                             $(".scene_04 .clock_minutes").addClass("animate_clock");
-                        }, 400);
+                        }, 800);
+
 
                         setTimeout(function () {
-                            $(".scene_04 .bubble_stakeholder:nth-of-type(2)").addClass("scene4_bbl_appers_2");
+                            $(".scene_04 .bubble_stakeholder:nth-of-type(2)").addClass("scene4_bbl_appears_2");
                             setTimeout(function () {
-                                $(".great_icon").fadeIn(10);
+                                $(".scene_04 .happy-face").fadeIn();
                                 setTimeout(function () {
-                                    $(".great_icon").fadeOut(10);
                                     scene_04_ft = false;
                                     fullpage_api.setAllowScrolling(true);
                                 }, 700);
                             }, 500);
-                        }, 1000);
-                    }, 4000 );
+                        }, 2000);
+
+                    }, 4500 );
                 }, scene_bbl_delay);
                 
             }
             if (destination.item.id == "page_10"){
-                $(".sneak_peak_wrapper img:nth-child(1)").addClass("sneak_peak_appers");
+                $(".sneak_peak_wrapper img:nth-child(1)").addClass("sneak_peak_appears");
                 setTimeout(function () {
-                    $(".sneak_peak_wrapper img:nth-child(2)").addClass("sneak_peak_appers");
+                    $(".sneak_peak_wrapper img:nth-child(2)").addClass("sneak_peak_appears");
                     setTimeout(function () {
-                        $(".sneak_peak_wrapper img:nth-child(3)").addClass("sneak_peak_appers");
+                        $(".sneak_peak_wrapper img:nth-child(3)").addClass("sneak_peak_appears");
                         setTimeout(function () {
-                            $(".sneak_peak_wrapper img:nth-child(4)").addClass("sneak_peak_appers");
+                            $(".sneak_peak_wrapper img:nth-child(4)").addClass("sneak_peak_appears");
                         }, 400);
                     }, 400);
                 }, 400);
@@ -227,15 +231,15 @@ $(document).ready(function(){
             if (destination.item.id == "page_13"){
                 $(".serie_circle:nth-of-type(1)").addClass("circle_grow_up");
                 setTimeout(function () {
-                    $(".product_dev_add").addClass("addAppers");
+                    $(".product_dev_add").addClass("addAppears");
                     setTimeout(function () {
-                    $(".product_invest").addClass("investAppers");
+                    $(".product_invest").addClass("investAppears");
                         setTimeout(function () {
-                            $(".circle_arrow:nth-of-type(1)").addClass("arrow_appers");
+                            $(".circle_arrow:nth-of-type(1)").addClass("arrow_appears");
                             setTimeout(function () {
                                 $(".serie_circle:nth-of-type(2)").addClass("circle_grow_up");
                                 setTimeout(function () {
-                                    $(".circle_arrow:nth-of-type(2)").addClass("arrow_appers");
+                                    $(".circle_arrow:nth-of-type(2)").addClass("arrow_appears");
                                     setTimeout(function () {
                                         $(".serie_circle:nth-of-type(3)").addClass("circle_grow_up");
                                     }, 350);
@@ -255,7 +259,7 @@ $(document).ready(function(){
     });
 
 
-    $(".scene_01 .days_wrapper").addClass("clockappers");
+    $(".scene_01 .days_wrapper").addClass("clockappears");
 
     $(".days_copy p").html("<span>2</span> Days");
 
