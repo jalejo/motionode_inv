@@ -1,18 +1,144 @@
 let scene_bbl_delay = 900;
 let clock_delay = 800;
-let scene_01_ft = false;
-let scene_02_ft = false;
-let scene_03_ft = false;
-let scene_04_ft = false;
+let scene_01_ft = true;
+let scene_02_ft = true;
+let scene_03_ft = true;
+let scene_04_ft = true;
+
+function sceneAnimation(){
+
+    if( scene_04_ft ){
+        fullpage_api.setAllowScrolling(false);
+    }
+
+    $(".app_screen").addClass("app_screen_appears");
+    setTimeout(function () {
+        $(".team_task").addClass("team_task_appears");
+    }, 300);
+    setTimeout(function () {
+        $(".scene_04 .bubble_stakeholder:nth-of-type(1)").addClass("scene1_bbl_appears_1");
+        setTimeout(function () {
+            $(".hand_icon").addClass("hand_appears");
+        }, 800);
+
+        /************ ALL HAND MOVE **************/
+
+        setTimeout(function () {
+            $(".app_request_wrapper section:nth-child(6)").addClass("grab-hover");
+            setTimeout(function () {
+                $(".app_request_wrapper section:nth-child(5)").addClass("grab-hover");
+                setTimeout(function () {
+                    $(".app_request_wrapper section:nth-child(4)").addClass("grab-hover");
+                    $(".app_request_wrapper section:nth-child(5)").removeClass("grab-hover");
+                    setTimeout(function () {
+                        $(".app_request_wrapper section:nth-child(5)").addClass("grab-hold");
+                        setTimeout(function () {
+                            $(".app_request_wrapper").addClass("row-to-top");
+                            setTimeout(function () {
+                                $(".app_request_wrapper section:nth-child(5)").removeClass("grab-hold");
+                            }, 500);
+                        }, 500);
+                    }, 500);
+                }, 300);
+            }, 400);
+        }, 800 + 400 );
+        setTimeout(function () {
+
+            $(".app_request_wrapper section:nth-child(5) div:nth-child(2)").html('June 07, 5:20 PM');
+            $(".app_request_wrapper section:nth-child(5) div:nth-child(3)").html('<img src="/img/develper_01.png">Lauren W.');
+
+            setTimeout(function () {
+                $(".app_request_wrapper section:nth-child(2) div:nth-child(2)").html('June 12, 9:42 AM');
+                $(".app_request_wrapper section:nth-child(2) div:nth-child(3)").html('<img src="/img/develper_03.png">Steve M.');
+            }, 150);
+            
+            setTimeout(function () {
+                $(".app_request_wrapper section:nth-child(3) div:nth-child(2)").html('June 14, 3:23 PM');
+                $(".app_request_wrapper section:nth-child(3) div:nth-child(3)").html('<img src="/img/develper_02.png">John C.');
+            }, 300);
+
+            setTimeout(function () {
+                $(".app_request_wrapper section:nth-child(4) div:nth-child(2)").html('June 25, 6:25 PM');
+                $(".app_request_wrapper section:nth-child(4) div:nth-child(3)").html('<img src="/img/develper_02.png">John C.');
+            }, 450);
+
+            setTimeout(function () {
+                $(".app_request_wrapper section:nth-child(6) div:nth-child(2)").html('June 30, 9:04 AM');
+                $(".app_request_wrapper section:nth-child(6) div:nth-child(3)").html('<img src="/img/develper_03.png">Steve M.');
+            }, 600);
+
+            setTimeout(function () {
+                $(".team_task img").attr("src","/img/team_task_reorder.png");
+            }, 1200);
+
+            setTimeout(function () {
+                $(".scene_04 .days_wrapper").addClass("clockappears");
+                $(".scene_04 .days_copy p").html("<span>0</span> minutes spent");
+                $(".scene_04 .clock_hours").addClass("animate_clock");
+                $(".scene_04 .clock_minutes").addClass("animate_clock");
+            }, 800);
+
+
+            setTimeout(function () {
+                $(".scene_04 .bubble_stakeholder:nth-of-type(2)").addClass("scene4_bbl_appears_2");
+                setTimeout(function () {
+                    $(".scene_04 .happy-face").fadeIn();
+                    setTimeout(function () {
+                        scene_04_ft = false;
+                        fullpage_api.setAllowScrolling(true);
+                        $(".replay-bttn").addClass("replay-appears");
+                    }, 700);
+                }, 500);
+            }, 2000);
+
+        }, 4500 );
+    }, scene_bbl_delay);
+}
 
 $(document).ready(function(){
 
 
     $( ".replay-bttn" ).on( "click", function() {
+
         $(".app_screen").removeClass("app_screen_appears");
         $(".team_task").removeClass("team_task_appears");
         $(".scene_04 .bubble_stakeholder:nth-of-type(1)").removeClass("scene1_bbl_appears_1");
         $(".hand_icon").removeClass("hand_appears");
+
+        $(".app_request_wrapper section:nth-child(6)").removeClass("grab-hover");
+        $(".app_request_wrapper section:nth-child(5)").removeClass("grab-hover");
+        $(".app_request_wrapper section:nth-child(4)").removeClass("grab-hover");
+        $(".app_request_wrapper").removeClass("row-to-top");
+
+        $(".team_task img").attr("src","/img/team_task.png");
+
+        $(".scene_04 .days_wrapper").removeClass("clockappears");
+        $(".scene_04 .days_copy p").html("");
+        $(".scene_04 .clock_hours").removeClass("animate_clock");
+        $(".scene_04 .clock_minutes").removeClass("animate_clock");
+
+        $(".scene_04 .bubble_stakeholder:nth-of-type(2)").removeClass("scene4_bbl_appears_2");
+        $(".scene_04 .happy-face").fadeOut();
+        $(".replay-bttn").removeClass("replay-appears");
+
+        $(".app_request_wrapper section:nth-child(2) div:nth-child(2)").html('June 02, 1:21 PM');
+        $(".app_request_wrapper section:nth-child(2) div:nth-child(3)").html('<img src="/img/develper_03.png">Lauren W.');
+
+        $(".app_request_wrapper section:nth-child(3) div:nth-child(2)").html('June 09, 2:52 PM');
+        $(".app_request_wrapper section:nth-child(3) div:nth-child(3)").html('<img src="/img/develper_02.png">John C.');
+
+        $(".app_request_wrapper section:nth-child(4) div:nth-child(2)").html('June 14, 2:22 PM');
+        $(".app_request_wrapper section:nth-child(4) div:nth-child(3)").html('<img src="/img/develper_03.png">Steve M.');
+
+        $(".app_request_wrapper section:nth-child(5) div:nth-child(2)").html('June 23, 12:24 PM');
+        $(".app_request_wrapper section:nth-child(5) div:nth-child(3)").html('<img src="/img/develper_03.png">Steve M.');
+
+        $(".app_request_wrapper section:nth-child(6) div:nth-child(2)").html('June 29, 11:05 AM');
+        $(".app_request_wrapper section:nth-child(6) div:nth-child(3)").html('<img src="/img/develper_04.png">Mark T.');
+
+        setTimeout(function () {
+            sceneAnimation();
+        }, 750);
     } );
 
 
@@ -133,95 +259,11 @@ $(document).ready(function(){
                     }, scene_bbl_delay);
                 }, scene_bbl_delay);
             }
+
             if (destination.item.dataset.scene == "scene_04") {
-                if( scene_04_ft ){
-                    fullpage_api.setAllowScrolling(false);
-                }
-
-                $(".app_screen").addClass("app_screen_appears");
-                setTimeout(function () {
-                    $(".team_task").addClass("team_task_appears");
-                }, 300);
-                setTimeout(function () {
-                    $(".scene_04 .bubble_stakeholder:nth-of-type(1)").addClass("scene1_bbl_appears_1");
-                    setTimeout(function () {
-                        $(".hand_icon").addClass("hand_appears");
-                    }, 800);
-
-                    /************ ALL HAND MOVE **************/
-
-                    setTimeout(function () {
-                        $(".app_request_wrapper section:nth-child(6)").addClass("grab-hover");
-                        setTimeout(function () {
-                            $(".app_request_wrapper section:nth-child(5)").addClass("grab-hover");
-                            setTimeout(function () {
-                                $(".app_request_wrapper section:nth-child(4)").addClass("grab-hover");
-                                $(".app_request_wrapper section:nth-child(5)").removeClass("grab-hover");
-                                setTimeout(function () {
-                                    $(".app_request_wrapper section:nth-child(5)").addClass("grab-hold");
-                                    setTimeout(function () {
-                                        $(".app_request_wrapper").addClass("row-to-top");
-                                        setTimeout(function () {
-                                            $(".app_request_wrapper section:nth-child(5)").removeClass("grab-hold");
-                                        }, 500);
-                                    }, 500);
-                                }, 500);
-                            }, 300);
-                        }, 400);
-                    }, 800 + 400 );
-                    setTimeout(function () {
-
-                        $(".app_request_wrapper section:nth-child(5) div:nth-child(2)").html('June 07, 5:20 PM');
-                        $(".app_request_wrapper section:nth-child(5) div:nth-child(3)").html('<img src="/img/develper_01.png">Lauren W.');
-
-                        setTimeout(function () {
-                            $(".app_request_wrapper section:nth-child(2) div:nth-child(2)").html('June 12, 9:42 AM');
-                            $(".app_request_wrapper section:nth-child(2) div:nth-child(3)").html('<img src="/img/develper_03.png">Steve M.');
-                        }, 150);
-                        
-                        setTimeout(function () {
-                            $(".app_request_wrapper section:nth-child(3) div:nth-child(2)").html('June 14, 3:23 PM');
-                            $(".app_request_wrapper section:nth-child(3) div:nth-child(3)").html('<img src="/img/develper_02.png">John C.');
-                        }, 300);
-
-                        setTimeout(function () {
-                            $(".app_request_wrapper section:nth-child(4) div:nth-child(2)").html('June 25, 6:25 PM');
-                            $(".app_request_wrapper section:nth-child(4) div:nth-child(3)").html('<img src="/img/develper_02.png">John C.');
-                        }, 450);
-
-                        setTimeout(function () {
-                            $(".app_request_wrapper section:nth-child(6) div:nth-child(2)").html('June 30, 9:04 AM');
-                            $(".app_request_wrapper section:nth-child(6) div:nth-child(3)").html('<img src="/img/develper_03.png">Steve M.');
-                        }, 600);
-
-                        setTimeout(function () {
-                            $(".team_task img").attr("src","/img/team_task_reorder.png");
-                        }, 1200);
-
-                        setTimeout(function () {
-                            $(".scene_04 .days_wrapper").addClass("clockappears");
-                            $(".scene_04 .days_copy p").html("<span>0</span> minutes spent");
-                            $(".scene_04 .clock_hours").addClass("animate_clock");
-                            $(".scene_04 .clock_minutes").addClass("animate_clock");
-                        }, 800);
-
-
-                        setTimeout(function () {
-                            $(".scene_04 .bubble_stakeholder:nth-of-type(2)").addClass("scene4_bbl_appears_2");
-                            setTimeout(function () {
-                                $(".scene_04 .happy-face").fadeIn();
-                                setTimeout(function () {
-                                    scene_04_ft = false;
-                                    fullpage_api.setAllowScrolling(true);
-                                    $(".replay-bttn").addClass("replay-appears");
-                                }, 700);
-                            }, 500);
-                        }, 2000);
-
-                    }, 4500 );
-                }, scene_bbl_delay);
-                
+                sceneAnimation();
             }
+
             if (destination.item.id == "page_10"){
                 $(".sneak_peak_wrapper img:nth-child(1)").addClass("sneak_peak_appears");
                 setTimeout(function () {
