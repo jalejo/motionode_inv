@@ -7,6 +7,15 @@ let scene_04_ft = false;
 
 $(document).ready(function(){
 
+
+    $( ".replay-bttn" ).on( "click", function() {
+        $(".app_screen").removeClass("app_screen_appears");
+        $(".team_task").removeClass("team_task_appears");
+        $(".scene_04 .bubble_stakeholder:nth-of-type(1)").removeClass("scene1_bbl_appears_1");
+        $(".hand_icon").removeClass("hand_appears");
+    } );
+
+
     $('#fullpage').fullpage({
         licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
 
@@ -128,16 +137,13 @@ $(document).ready(function(){
                 if( scene_04_ft ){
                     fullpage_api.setAllowScrolling(false);
                 }
+
                 $(".app_screen").addClass("app_screen_appears");
-                
                 setTimeout(function () {
                     $(".team_task").addClass("team_task_appears");
                 }, 300);
-
                 setTimeout(function () {
                     $(".scene_04 .bubble_stakeholder:nth-of-type(1)").addClass("scene1_bbl_appears_1");
-                    $(".great_icon").html("<img src='/img/confetti-ball.webp'>");
-                
                     setTimeout(function () {
                         $(".hand_icon").addClass("hand_appears");
                     }, 800);
@@ -207,6 +213,7 @@ $(document).ready(function(){
                                 setTimeout(function () {
                                     scene_04_ft = false;
                                     fullpage_api.setAllowScrolling(true);
+                                    $(".replay-bttn").addClass("replay-appears");
                                 }, 700);
                             }, 500);
                         }, 2000);

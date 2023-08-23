@@ -796,6 +796,14 @@ img.urgent_client_circle {
   top: calc(50% + 20vh);
   right: calc(50% + 15vh);
   cursor: pointer;
+  transform: scale(0);
+  opacity: 0;
+  transition: all 200ms ease-in;
+}
+
+.replay-bttn.replay-appears{
+  opacity: 1;
+  transform: scale(1);
 }
 
 .replay-bttn img{
