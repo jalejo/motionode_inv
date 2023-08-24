@@ -1,9 +1,9 @@
 let scene_bbl_delay = 900;
 let clock_delay = 800;
-let scene_01_ft = true;
-let scene_02_ft = true;
-let scene_03_ft = true;
-let scene_04_ft = true;
+let scene_01_ft = false;
+let scene_02_ft = false;
+let scene_03_ft = false;
+let scene_04_ft = false;
 
 function sceneAnimation(){
 
