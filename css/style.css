@@ -1697,13 +1697,13 @@ img.urgent_client_circle {
   .app_screen {
     width: 18rem;
     right: -10.85rem;
-    padding-top: 84%;
+    padding-top: 80%;
   }
   .app_request_wrapper {
     font-size: 1rem;
   }
   .app_screen.app_screen_appears {
-    top: -96%;
+    top: -89%;
   }
   .app_request_wrapper section div:nth-child(1){
     white-space: nowrap;
@@ -1712,7 +1712,7 @@ img.urgent_client_circle {
   }
   .scene_04 .bubble_stakeholder:nth-of-type(1) {
     right: -128%;
-    top: 11%;
+    top: 17%;
   }
   .scene_04 .bubble_stakeholder:nth-of-type(2) {
     right: -46%;
@@ -1751,5 +1751,9 @@ img.urgent_client_circle {
   }
   .replay-bttn img {
     width: 0.7rem;
+  }
+  .logo-scene {
+    width: 8rem;
+    top: 6%;
   }
 }
