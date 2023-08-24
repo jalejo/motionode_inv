@@ -1544,15 +1544,20 @@ img.urgent_client_circle {
   .team_advante_oscar {
     flex-direction: column;
     width: 100%;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 2rem;
   }
   .team_advante_team{
     width: 100%;
   }
   .page_12_Lbox {
-    width: 90%;
+    width: 80%;
+    height: 16.5rem;
+    overflow: hidden;
     right: auto;
     left: auto;
-    top: 0;
+    top: 5%;
   }
   .page_12_Rbox {
     width: 90%;
@@ -1560,10 +1565,32 @@ img.urgent_client_circle {
     right: auto;
     top: 0;
   }
-
-
-
-
+  .page_12_Rbox {
+    width: 80%;
+    left: auto;
+    right: auto;
+    top: calc(50% + 2rem);
+  }
+  .page_12_Rbox p {
+    font-size: .9rem;
+  }
+  .page_12_logo {
+    text-align: center;
+    width: 8rem;
+  }
+  .page_12_wrapper h5 {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+  .page_12_Lbox h3 {
+    font-size: 1.25rem;
+    margin-bottom: .75rem;
+    font-weight: 600;
+  }
+  .page_12_Lbox li {
+    font-size: .76rem;
+    line-height: 1.5;
+  }
   .page_14_box {
     width: 75%;
   }
@@ -1599,7 +1626,7 @@ img.urgent_client_circle {
   }
   .scene_headlines h3:nth-child(1) {
     color: rgb(77 152 152 / 30%);
-    top: 2%;
+    top: 4%;
   }
   .client_img {
     left: 2rem;
@@ -1770,4 +1797,55 @@ img.urgent_client_circle {
     width: 8rem;
     top: 6%;
   }
+  .circles_wrapper {
+    flex-direction: column;
+    width: 12rem;
+  }
+  .serie_circle {
+    font-size: .7rem;
+  }
+  .serie_circle:nth-of-type(1) {
+    width: 6rem;
+    height: 6rem;
+  }
+  .serie_circle:nth-of-type(2) {
+    width: 7.5rem;
+    height: 7.5rem;
+  }
+  .serie_circle:nth-of-type(3) {
+    width: 9rem;
+    height: 9rem;
+  }
+  .circle_arrow.arrow_appears img{
+    transform: rotate(90deg);
+  }
+  .circle_arrow {
+    width: 1rem;
+    height: 2.5rem;
+  }
+  .product_dev_add {
+    left: calc(50% + 6.25rem);
+    top: calc(50% - 14rem);
+    width: 4.75rem;
+    height: 4rem;
+    transform: rotate(-90deg) translate(-1rem, 0rem);
+  }
+  .product_dev_add.addAppears {
+    transform: rotate(-90deg) translate(-1rem, -1.5rem);
+    opacity: 1;
+  }
+  .product_invest {
+    left: calc(50% + 5rem);
+    top: calc(50% - 6rem);
+    font-size: .7rem;
+    width: 10rem;
+  }
+  .product_invest_arrow {
+    width: 0.7rem;
+    height: 5rem;
+    top: -3.35rem;
+    left: -1.25rem;
+    transform: rotate(-90deg);
+  }
+
 }
