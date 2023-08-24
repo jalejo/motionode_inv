@@ -1632,7 +1632,7 @@ img.urgent_client_circle {
   .urgent_client {
     position: absolute;
     right: calc(50% - 2rem);
-    top: calc(50% - 7rem);
+    top: calc(50% - 6rem);
     width: 11rem;
   }
   .scene_02 .team_img {
@@ -1658,7 +1658,7 @@ img.urgent_client_circle {
     font-size: 0.7rem;
   }
   .urgent_wrapper.urgent_wrapper_appears {
-    top: calc(50% - 20rem);
+    top: calc(50% - 18rem);
   }
   .scene_02 .bubble_development {
     top: 3%;
