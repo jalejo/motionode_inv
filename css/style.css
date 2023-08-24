@@ -1472,9 +1472,15 @@ img.urgent_client_circle {
     left: 0;
     right: 0;
     margin: auto;
-    justify-content: center;
+    justify-content: start;
+    top: calc(50% + 15rem);
+    column-gap: 0.35rem;
   }
-
+  .days_clock {
+    width: 1.25rem;
+    height: 1.25rem;
+    border: 2px solid #29426B;
+  }
   .days_copy h5 {
     font-size: .7rem;
   }
