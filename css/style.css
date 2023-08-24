@@ -1666,4 +1666,90 @@ img.urgent_client_circle {
     padding: 6px 10px 6px 18px;
     border-radius: 1rem 1rem 0rem 1rem;
   }
+  .scene_03 .client_img {
+    width: 11rem;
+    top: calc( 50% - 12rem);
+  }
+  .scene_03 .bubble_stakeholder {
+    top: -26%;
+    right: -50%;
+  }
+  .scene_03 .team_img {
+    width: 14rem;
+    left: calc(50% - 1rem );
+    top: calc( 50% + 2rem);
+  }
+  .scene_03 .bubble_development {
+    top: 5%;
+    left: -59%;
+  }
+  .singleLabel_stakeholder {
+    right: -7rem;
+    max-width: 10rem;
+    top: 52%;
+    font-size: .7rem;
+  }
+  .scene_04 .client_img {
+    width: 10rem;
+    left: calc(50% - 12rem);
+    top: calc( 50% - 9rem);
+  }
+  .app_screen {
+    width: 18rem;
+    right: -10.85rem;
+    padding-top: 84%;
+  }
+  .app_request_wrapper {
+    font-size: 1rem;
+  }
+  .app_screen.app_screen_appears {
+    top: -96%;
+  }
+  .app_request_wrapper section div:nth-child(1){
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .scene_04 .bubble_stakeholder:nth-of-type(1) {
+    right: -128%;
+    top: 11%;
+  }
+  .scene_04 .bubble_stakeholder:nth-of-type(2) {
+    right: -46%;
+    top: 61%;
+  }
+  .scene_04 .team_img {
+    left: calc(50% + 2rem);
+    width: 8rem;
+    height: 12rem;
+    top: calc(50% + 9rem);
+  }
+  .m-logo {
+    border-radius: 2px;
+  }
+  .scene_04 .team_img .m-logo.nb-boy {
+    left: 32%;
+    top: 16%;
+  }
+  .scene_04 .team_img .m-logo.nb-girl {
+    left: 7.5%;
+    top: 36%;
+  }
+  .team_task img {
+    width: 17rem;
+    left: -9rem;
+    top: 0rem;
+  }
+  .team_task.team_task_appears img {
+    top: -5rem;
+  }
+  .replay-bttn {
+    width: 4rem;
+    top: calc(50% - 0.5rem);
+    right: calc(50% - 9rem);
+    font-size: .8rem;
+  }
+  .replay-bttn img {
+    width: 0.7rem;
+  }
 }
