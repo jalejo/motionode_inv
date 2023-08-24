@@ -1444,3 +1444,27 @@ img.urgent_client_circle {
     top: calc(50% + 4.7rem);
   }
 }
+
+
+@media (max-width: 690px) {
+  .home_logo_wrapper {
+    width: 16rem;
+    height: 4rem;
+  }
+  .arm_wrapper {
+    bottom: calc(50% - 15rem);
+    left: calc(50% - 4rem);
+    width: 20rem;
+    height: 10rem;
+  }
+  .home_logo_wrapper p {
+    font-size: .7rem;
+  }
+  .ai_icon_wrapper {
+    width: 4rem;
+    position: absolute;
+    left: calc( 50% + 3rem);
+    bottom: calc(50% - 20rem);
+  }
+
+}
