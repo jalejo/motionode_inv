@@ -1611,18 +1611,59 @@ img.urgent_client_circle {
   .team_img {
     left: calc(50% + 2rem);
     width: 9rem;
-    height: 23rem;
-    top: calc(50% + 5rem);
+    height: 13rem;
+    top: calc(50% + 7rem);
   }
   .team_boy {
-    top: 3rem;
+    top: 1rem;
   }
   .bubble_development {
     left: -5rem;
+    top: -3.5rem;
     padding: 4px 14px;
     max-width: 10rem;
   }
+  .bubble_development.bbl04_readed.scene1_bbl_appears_4 {
+    transform: translate(-55%, 190%) scale(1);
+  }
   .bubble_development br{
     display: none;
+  }
+  .urgent_client {
+    position: absolute;
+    right: calc(50% - 2rem);
+    top: calc(50% - 7rem);
+    width: 11rem;
+  }
+  .scene_02 .team_img {
+    left: calc(50% + 0rem);
+    top: calc( 50% + 7rem);
+    width: 10rem;
+  }
+  .urgent_wrapper {
+    width: 18rem;
+    right: calc( 50% - 9rem);
+  }
+  .urgent_wrapper img {
+    width: 75%;
+  }
+  .urgent_wrapper h2 {
+    font-size: 1.25rem;
+    margin-bottom: 0.25rem;
+  }
+  .urgent_wrapper h5 {
+    font-size: 1rem;
+  }
+  .urgent_wrapper p {
+    font-size: 0.7rem;
+  }
+  .urgent_wrapper.urgent_wrapper_appears {
+    top: calc(50% - 20rem);
+  }
+  .scene_02 .bubble_development {
+    top: 3%;
+    left: -97%;
+    padding: 6px 10px 6px 18px;
+    border-radius: 1rem 1rem 0rem 1rem;
   }
 }
