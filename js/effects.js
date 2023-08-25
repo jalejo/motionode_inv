@@ -1,9 +1,9 @@
 let scene_bbl_delay = 900;
 let clock_delay = 800;
-let scene_01_ft = true;
-let scene_02_ft = true;
-let scene_03_ft = true;
-let scene_04_ft = true;
+let scene_01_ft = false;
+let scene_02_ft = false;
+let scene_03_ft = false;
+let scene_04_ft = false;
 
 function sceneAnimation(){
 
@@ -97,6 +97,14 @@ function sceneAnimation(){
 
 $(document).ready(function(){
 
+    const urlParams = new URLSearchParams(window.location.search).get("access");
+    console.log("🚀 ~ file: effects.js:101 ~ $ ~ urlParams:", urlParams)
+    
+    if (urlParams && urlParams.length === 3) {
+        $('#passw01').val(urlParams[0]);
+        $('#passw02').val(urlParams[1]);
+        $('#passw03').val(urlParams[2]);
+    }
 
     $( ".replay-bttn" ).on( "click", function() {
 
