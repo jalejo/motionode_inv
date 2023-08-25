@@ -6,7 +6,7 @@ let scene_03_ft = false;
 let scene_04_ft = false;
 
 function sceneAnimation(){
-
+    
     if( scene_04_ft ){
         fullpage_api.setAllowScrolling(false);
     }
@@ -96,7 +96,7 @@ function sceneAnimation(){
 }
 
 $(document).ready(function(){
-
+    
     const urlParams = new URLSearchParams(window.location.search).get("access");
     console.log("🚀 ~ file: effects.js:101 ~ $ ~ urlParams:", urlParams)
     
