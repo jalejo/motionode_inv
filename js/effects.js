@@ -1,9 +1,9 @@
 let scene_bbl_delay = 900;
 let clock_delay = 800;
-let scene_01_ft = false;
-let scene_02_ft = false;
-let scene_03_ft = false;
-let scene_04_ft = false;
+let scene_01_ft = true;
+let scene_02_ft = true;
+let scene_03_ft = true;
+let scene_04_ft = true;
 
 function sceneAnimation(){
     
@@ -19,7 +19,7 @@ function sceneAnimation(){
         $(".scene_04 .bubble_stakeholder:nth-of-type(1)").addClass("scene1_bbl_appears_1");
         setTimeout(function () {
             $(".hand_icon").addClass("hand_appears");
-        }, 800);
+        }, 1500);
 
         /************ ALL HAND MOVE **************/
 
@@ -36,12 +36,13 @@ function sceneAnimation(){
                             $(".app_request_wrapper").addClass("row-to-top");
                             setTimeout(function () {
                                 $(".app_request_wrapper section:nth-child(5)").removeClass("grab-hold");
-                            }, 500);
-                        }, 500);
-                    }, 500);
-                }, 300);
-            }, 400);
-        }, 800 + 400 );
+                            }, 600);
+                        }, 600);
+                    }, 600);
+                }, 500);
+            }, 600);
+        }, 1500 + 600 );
+        
         setTimeout(function () {
 
             $(".app_request_wrapper section:nth-child(5) div:nth-child(2)").html('June 07, 5:20 PM');
@@ -50,35 +51,28 @@ function sceneAnimation(){
             setTimeout(function () {
                 $(".app_request_wrapper section:nth-child(2) div:nth-child(2)").html('June 12, 9:42 AM');
                 $(".app_request_wrapper section:nth-child(2) div:nth-child(3)").html('<img src="/img/develper_03.png">Steve M.');
-            }, 150);
+            }, 350);
             
             setTimeout(function () {
                 $(".app_request_wrapper section:nth-child(3) div:nth-child(2)").html('June 14, 3:23 PM');
                 $(".app_request_wrapper section:nth-child(3) div:nth-child(3)").html('<img src="/img/develper_02.png">John C.');
-            }, 300);
+            }, 700);
 
             setTimeout(function () {
                 $(".app_request_wrapper section:nth-child(4) div:nth-child(2)").html('June 25, 6:25 PM');
                 $(".app_request_wrapper section:nth-child(4) div:nth-child(3)").html('<img src="/img/develper_02.png">John C.');
-            }, 450);
+            }, 1050);
 
             setTimeout(function () {
                 $(".app_request_wrapper section:nth-child(6) div:nth-child(2)").html('June 30, 9:04 AM');
                 $(".app_request_wrapper section:nth-child(6) div:nth-child(3)").html('<img src="/img/develper_03.png">Steve M.');
-            }, 600);
+            }, 1800);
 
             setTimeout(function () {
                 $(".team_task img").attr("src","/img/team_task_reorder.png");
-            }, 1200);
+            }, 2550);
 
-            setTimeout(function () {
-                $(".scene_04 .days_wrapper").addClass("clockappears");
-                $(".scene_04 .days_copy p").html("<span>0</span> minutes spent");
-                $(".scene_04 .clock_hours").addClass("animate_clock");
-                $(".scene_04 .clock_minutes").addClass("animate_clock");
-            }, 800);
-
-
+        
             setTimeout(function () {
                 $(".scene_04 .bubble_stakeholder:nth-of-type(2)").addClass("scene4_bbl_appears_2");
                 setTimeout(function () {
@@ -89,9 +83,18 @@ function sceneAnimation(){
                         $(".replay-bttn").addClass("replay-appears");
                     }, 700);
                 }, 500);
-            }, 2000);
+            }, 4500);
 
-        }, 4500 );
+
+            setTimeout(function () {
+                $(".scene_04 .days_wrapper").addClass("clockappears");
+                $(".scene_04 .days_copy p").html("<span>0</span> minutes spent");
+                $(".scene_04 .clock_hours").addClass("animate_clock");
+                $(".scene_04 .clock_minutes").addClass("animate_clock");
+            }, 3800);
+
+
+        }, 5500 );
     }, scene_bbl_delay);
 }
 

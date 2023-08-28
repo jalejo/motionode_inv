@@ -1039,7 +1039,7 @@ img.urgent_client_circle {
 }
 
 .hand_icon.hand_appears{
-  animation: hand_appears 3000ms ease-out forwards;
+  animation: hand_appears 4100ms ease-out forwards;
 }
 
 @keyframes hand_appears {
