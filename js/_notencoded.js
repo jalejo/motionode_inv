@@ -23,13 +23,19 @@ function setCookie(name, value, days) {
   
   $(document).ready(function () {
     var code = getCookie("code");
+    console.log(code);
     fullpage_api.setAllowScrolling(false);
     $("body").scrollTop(0);
     $(".invalid-code").hide();
     if (code) {
-      $(".passw_wrapper").hide();
-      $("#startExperience").hide();
-      fullpage_api.setAllowScrolling(true);
+        const v1 = $("#passw01").val(code[0]);
+        const v2 = $("#passw02").val(code[1]);
+        const v3 = $("#passw03").val(code[2]);
+  
+
+    //   $(".passw_wrapper").hide();
+    //   $("#startExperience").hide();
+    //   fullpage_api.setAllowScrolling(true);
       // setTimeout(() => {
       //     fullpage_api.moveSectionDown();
       //   }, "2000");
@@ -50,7 +56,7 @@ function setCookie(name, value, days) {
         code: fullCode,
       });
       fullpage_api.setAllowScrolling(true);
-      let r = (Math.random() + 1).toString(36).substring(7);
+      let r = fullCode + (Math.random() + 1).toString(36).substring(7);
       setCookie("code", r, 7);
       $(".passw_wrapper").fadeOut("slow", function () {});
       $("#startExperience").fadeOut("slow", function () {});
